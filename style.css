@@ -1,0 +1,549 @@
+﻿@font-face {
+	font-family: "Bebas Neue Regular"; 
+	src: url('font/BebasNeueRegular.ttf') format('truetype'),
+	url('font/BebasNeueRegular.woff') format('woff'),
+	url('font/BebasNeueRegular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal; 
+}
+/* иконочный шрифт - подключение */
+@font-face {
+  font-family: 'fontello';
+  src: url('icons/font/fontello.eot?31919061');
+  src: url('icons/font/fontello.eot?31919061#iefix') format('embedded-opentype'),
+  url('icons/font/fontello.woff?31919061') format('woff'),
+  url('icons/font/fontello.ttf?31919061') format('truetype'),
+  url('icons/font/fontello.svg?31919061#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+   }
+/* иконочный шрифт - подключение - конец */
+/* ПРЕДЗАГРУЗЧИК НАЧАЛО */
+.preloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background: url(img/preloaderTSH.gif) center no-repeat #fff;
+    text-align: center;
+}
+/* ПРЕДЗАГРУЗЧИК КОНЕЦ */
+/* ПАРАЛЛАКС */
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+/* ПАРАЛЛАКС _ КОНЕЦ */
+/*common*/
+html {/*цвет подложки*/
+	background-color: transparent;
+}
+ul {
+	list-style: none;
+}
+a {
+	display: block;
+}
+.menu:hover {
+	 border-bottom: 3px solid pink;
+    padding-bottom: 1px;
+}
+h2 {
+	font: bold 3em 'Bebas Neue Regular';
+	margin: 0 auto;
+	padding-top: 70px;
+	text-align: center;
+	color: grey;
+}
+/*ЛОГО - НАЧАЛО*/
+.logo {
+	position: fixed;
+	z-index: 11;
+	float: left;
+}
+/*ЛОГО - КОНЕЦ*/
+/*МЕНЮ _ НАЧАЛО*/
+nav {
+	position: fixed;
+	left: 0;
+    top: 0;
+	text-align: center;
+	background-image: url(img/polcadot70.jpg);
+	background-repeat: repeat-x;
+	z-index: 10;
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+}
+nav a {
+	display: inline-block;
+	font: bold 2em 'Bebas Neue Regular';
+	color: white;
+	text-shadow: 1px 1px 2px black;
+}
+/*соцсети*/ /* иконочный шрифт */
+.icon-vkontakte, .icon-facebook, .icon-youtube-play, .icon-instagram {
+	list-style-type: none;
+	font-family: "fontello";
+	font-style: normal;
+	font-weight: normal;
+	font-size: .9em;
+	margin: 0 5px;
+	color: white;
+	display: inline-block;
+	height: 45px;
+	width: 45px;
+  	border-radius: 50%;	
+}
+.icon-arrow-curved:before {content: '\e800';}
+.icon-plus:before {content: '\e801';}
+.icon-vkontakte:before {content: '\f189';}
+.icon-facebook:before {content: '\f09a'; }
+.icon-youtube-play:before {content: '\f16a'; }
+.icon-instagram:before {content: '\f32d'; }
+.icon-vkontakte:hover {background-color: #4c75a3;}
+.icon-facebook:hover {background-color: #3b5999;}
+.icon-youtube-play:hover{background-color: #cd201f;}
+.icon-instagram:hover{background-color: #e4405f;}
+/* конец иконочный шрифт */
+/*МЕНЮ _ КОНЕЦ*/
+/*СЛАЙДЕР*/
+#slides {
+	position: relative;
+	margin: 0 auto;
+	list-style-type: none;
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-position: top center;
+    min-height: 100vh;
+	display: flex;
+}
+.slide {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 1s;
+}
+.showing {
+	opacity: 1;
+	z-index: 2;
+}
+#pic1 {
+	background-image: url(img/slide1.jpg);
+	background-repeat: no-repeat;
+}
+#pic2 {
+	background-image: url(img/slide2.jpg);
+	background-repeat: no-repeat;
+}
+#pic3 {
+	background-image: url(img/slide3.jpg);
+	background-repeat: no-repeat;
+}
+#slides>li>p {
+	font: bold 200px 'Bebas Neue Regular';
+	margin: 150px 100px 100px 100px;
+	color: white;
+	text-shadow: 1px 1px 2px black;
+	text-align: center;
+} 
+.showing p {
+	-webkit-animation-name: slideInUp, slideOutDown;
+	-webkit-animation-duration: 1s, 1s;
+	-webkit-animation-delay: 0s, 8s;
+	animation-name: slideInUp, slideOutDown;
+	animation-duration: 1s, 1s;
+	animation-delay: 0s, 8s;
+}
+/*КОНЕЦ СЛАЙДЕРА*/
+/* кнопки слайдера*/
+.controls{
+  background: rgba(51, 51, 51, .5);
+  color: #fff;
+  border: none;
+  padding: 20px 0px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  margin: 0px 20px 0px 20px;
+  width: 70px;
+}
+.controls:hover,
+.controls:focus{
+  background: #eee;
+  color: #333;
+}
+.container{
+  position: relative;
+}
+.buttons{
+  position: absolute;
+  top: 50%;
+  z-index: 9;
+  font-size: 0px;
+  width: 100%;
+}
+#previous {
+	/* position: absolute; */
+	/* left: 0px; */
+}
+#next {
+  right: 0px;
+  float: right;
+  margin-left: auto;
+}
+/* конец кнопок слайдера */
+/*ВОТОРОЙ СКРОЛЛ*/
+.left {
+	float: left;
+	width: 25%;
+	margin-left: 30px;
+}
+.leftLi, .rightLi {
+	margin-top: 20px;
+}
+.leftColumnStyle {
+	-webkit-animation-name: moveRightColumnLeft;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-delay: 0s;
+	animation-name: moveRightColumnLeft;
+	animation-duration: 2s;
+	animation-delay: 0s;
+}
+.rightColumnStyle {
+	-webkit-animation-name: moveLeftColumnRight;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-delay: 0s;
+	animation-name: moveLeftColumnRight;
+	animation-duration: 2s;
+	animation-delay: 0s;
+}
+.right {
+	float: right;
+	width: 25%;
+	margin-right: 30px;
+}
+.center {
+	margin: 0 auto;
+	background-color: white;
+	background-image: url(img/first600.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 700px;
+	height: 538px;
+}
+.first,.second, .third {
+	min-height: 100vh;
+	width: 100%;
+	height: 100%;
+}
+.first li{
+	font-family: Georgia;
+	font-size: 1.5em;
+}
+.first p {
+	font: bold 35px 'Bebas Neue Regular';
+	text-shadow: 1px 1px 2px black;
+	text-align: center;
+}
+/*ОБЩЕЕ ДЛЯ ВТОРОГО И ТРЕТЬЕГО СКРОЛА - КОНЕЦ*/
+/*ВТОРОЙ БЛОК*/
+.second {
+	background-color: white;
+	opacity: 0.7;	
+}
+.containerSecond {
+	width:100%;
+	margin:0 auto;
+	overflow:auto;
+}
+.right-content, .left-content {
+	float:left;
+	display:block;
+	width:40%;
+	padding:1% 2%;
+}
+.left-content {
+	border-right:5px dotted #666;	
+	text-align:right;
+}
+.left-content li {
+	margin:150px 0 0;
+}
+.right-content li {
+	margin:80px 0 150px;
+}
+.containerSecond li {
+	font: bold 2em Georgia;
+	-webkit-transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7 ease-in-out;
+	-ms-transition: all 0.7s ease-in-out;
+	-o-transition: all 0.7s ease-in-out;
+	transition: all 0.7s ease-in-out;	
+}
+.left-content .more-padding {
+  padding-right:100px;
+}
+.right-content .more-padding {
+  padding-left:100px;
+}
+/*ВТОРОЙ БЛОК КОНЕЦ*/
+/*ФОРМА - НАЧАЛО*/
+form{
+	padding:15px;
+	font-family:Georgia;
+	width:30%;
+	margin:0 auto;
+	background:#eeeeee;
+	border:1px #777777 solid;
+}
+label {
+    display:block;
+    margin-top:10px;
+}
+input{
+	border:1px solid #dedede;
+	padding:5px;
+	margin-top:3px;
+	font-size:0.9em;
+	color:#3a3a3a;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+input[submit]{
+	color:white;
+}
+input:focus {
+	border:1px solid #97d6eb;
+}
+/* Кнопка */
+.btn {
+	margin: 2px 0;
+	border: solid 1px transparent;
+	border-radius: 4px;
+	padding: 0.5em 1em;
+	color: #ffffff;
+	background-color: #9555af;
+}
+.btn:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+.btn:hover {
+  color: #9050aa;
+  border-color: currentColor;
+  background-color: white;
+}
+/* Firefox: сбрасываем внутреннюю границу при фокусе */
+.btn::-moz-focus-inner {
+  border: none;
+}
+/* убеждаемся, что есть видимые границы при фокусе */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.5),
+    0 0 0 1.5px rgba(255, 105, 180, 0.5);
+}
+/* скрываем фокусные стили, если используется не клавиатура */
+.js-focus-visible .btn:focus:not(.focus-visible) {
+  box-shadow: none;
+}
+/* КНОПКА ЗАМОВИЦЬ _КОНЕЦ */
+.vld{
+	background-color:#eeeeee;
+	border:0px
+}
+span{
+	color: red;
+	}
+#result {
+	height: 30px;
+	color: red;
+}
+/*ФОРМА - КОНЕЦ*/
+/*ФУТЕР _ НАЧАЛО*/
+.bottomFooter {
+	width: 100%;
+	/* height: 30%; */
+	height: 178px;
+	background-color: dimgray;
+	text-align: center;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.footerLogo {
+	width: 100px;
+	height: 100px;
+}
+#img1 {
+	background-image: url(img/katya3.png);
+	background-repeat: no-repeat;
+	width: 167px;
+	height: 317px;
+	float: left;
+	bottom:0;
+}
+.img1Style {
+	-webkit-animation-name: moveRightImg1, moveLeftImg1;
+	-webkit-animation-duration: 5s, 5s;
+	-webkit-animation-delay: 0s, 5s;
+	animation-name: moveRightImg1, moveLeftImg1;
+	animation-duration: 5s, 5s;
+	animation-delay: 0s, 5s;
+}
+#img2 {
+	background-image: url(img/sasha3.png);
+	background-repeat: no-repeat;
+	width: 197px;
+	height: 317px;
+	float: right;	
+}
+.img2Style {
+	-webkit-animation-name: moveLeftImg2, moveRightImg2;
+	-webkit-animation-duration: 5s, 5s;
+	-webkit-animation-delay: 0s, 5s;
+	animation-name: moveLeftImg2, moveRightImg2;
+	animation-duration: 5s, 5s;
+	animation-delay: 0s, 5s;
+	
+}
+.socialFooter a {
+display: inline-block;
+	font: bold 35px 'Bebas Neue Regular';
+	color: white;
+	text-shadow: 1px 1px 2px black;
+}
+.bottomFooter p {
+	font-family: Georgia;
+	font-size: 1.2em;	
+	color: white;
+}
+/*ФУТЕР _ КОНЕЦ*/
+/*КЛЮЧЕВЫЕ КАДРЫ СЛАЙДЕРА*/
+@keyframes slideInUp {
+	from {	/*текст не виден и опущен на 50 пикселей*/
+	opacity: 0;
+	-webkit-transform: translateY(120px);
+    -ms-transform: translateY(120px);
+    transform: translateY(120px);
+	}
+	to {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+	}	
+}
+
+@keyframes slideOutDown {
+	from {	
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+	}
+	to {
+	opacity: 0;
+	-webkit-transform: translateY(80px);
+    -ms-transform: translateY(80px);
+    transform: translateY(80px);
+	}	
+}
+
+/*Изображения футера*/
+@keyframes moveRightImg1 {
+	from {	/*объект за границей экрана*/
+	-webkit-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    transform: translateX(-200px);
+	}
+	to {
+	-webkit-transform: translateX(500px);
+    -ms-transform: translateX(500px);
+    transform: translateX(500px);
+	}	
+}
+
+@keyframes moveLeftImg1{
+	from {	
+	-webkit-transform: translateX(500px);
+    -ms-transform: translateX(500px);
+    transform: translateX(500px);
+	}
+	to {
+	-webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+	}	
+}
+
+@keyframes moveLeftImg2 {
+	from {
+	-webkit-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    transform: translateX(200px);
+	}
+	to {
+	-webkit-transform: translateX(-500px);
+    -ms-transform: translateX(-500px);
+    transform: translateX(-500px);
+	}	
+}
+
+@keyframes moveRightImg2{
+	from {	
+	-webkit-transform: translateX(-500px);
+    -ms-transform: translateX(-500px);
+    transform: translateX(-500px);
+	}
+	to {
+	-webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+	}	
+}
+/*Колонки второго экрана*/
+/*левая*/
+@keyframes moveRightColumnLeft {
+	from {	/*объект за границей экрана*/
+	-webkit-transform: translateX(-300px);
+    -ms-transform: translateX(-300px);
+    transform: translateX(-300px);
+	}
+	to {
+	-webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+	}	
+}
+
+/*правая*/
+@keyframes moveLeftColumnRight{
+	from {
+	-webkit-transform: translateX(300px);
+    -ms-transform: translateX(300px);
+    transform: translateX(300px);
+	}
+	to {
+	-webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+	}	
+}
+

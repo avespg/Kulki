@@ -1,0 +1,156 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Торба шоу</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	<link rel="stylesheet" href="icons/css/fontello.css">
+	<!-- ПАРАЛЛАКС -->
+	<script src="js-plugins/jquery-3.3.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>	
+	<script src="js-plugins/parallax.min.js"></script>
+	<!-- Slider -->
+	<script src="js/script.js"></script>
+
+</head>
+<body>
+<!-- ПРЕДЗАГРУЗЧИК -->
+<div class="preloader"></div>
+
+<!-- АУДИО -->
+<audio src="sound/music.mp3" loop autoplay></audio>
+	<header>
+			<nav>
+		<div class="logo"><!-- лого -->
+			<a href="index.html"><img src="img/logo70.jpg" alt="logo_Torba_Show"></a>
+		</div>
+			<a href="#galounaja" class="menu">Галоўная</a>
+			<a>|</a>
+			<a href="#kulki" class="menu">Кулькі</a>
+			<a>|</a>
+			<a href="#instrukcia" class="menu">Iнструкцыя</a>
+			<a>|</a>
+			<a href="#zamovic" class="menu">Замовіць</a>
+			<a>|</a>
+			<a href="#kantakty" class="menu">Кантакты</a>
+			<a>|</a>
+			<a href="https://vk.com/torbashow" target="_blank"><i class="icon-vkontakte"></i></a>
+			<a href="https://www.facebook.com/torbashow/" target="_blank"><i class="icon-facebook"></i></a>
+			<a href="https://www.youtube.com/channel/UCAs-0EcIlmJs5XvZGNmRUwQ/videos" target="_blank"><i class="icon-youtube-play"></i></a>
+			<a href="https://www.instagram.com/torbashow/" target="_blank"><i class="icon-instagram"></i></a>
+		<div style="clear: both"></div>
+		</nav>
+	</header>	
+	
+	<!-- слайдер -->
+	<section >
+		<div class="container">
+		<p><a name="galounaja"></a></p>
+			<ul id="slides">
+				<li class="slide showing" id="pic1"><p>Сустракайце</p></li>
+				<li class="slide" id="pic2"><p>Альтэрнатыву пакетам -</p></li>
+				<li class="slide" id="pic3"><p>Кулькі</p></li>
+			</ul>
+			<!-- кнопки слайдера -->
+			<div class="buttons">
+				<button class="controls" id="previous"><</button>
+				<button class="controls" id="next">></button>
+			</div>
+		</div>
+	</section>
+
+	<section class="first">	
+		<a name="kulki"></a>
+		<h2>Кулькі</h2>
+		<div class="left">
+			<ul>
+				<li class="leftLi">Мы спрабавалі шыць з рознай тканіны,</li>
+				<li class="leftLi">перабралі безліч шнурочкаў,</li>
+				<li class="leftLi">перайначвалі тэхналогію,</li>
+				<li class="leftLi">рабілі шоўчыкі і краі ўсё больш дасканалымі і акуратнымі,</li>
+				<li class="leftLi">тэсцілі на сабе і на матулях,</li>
+				<li class="leftLi">адкідвалі і зацвярджалі ўсё новыя і новыя варыянты.</li>
+			</ul>
+		</div>
+		<div class="right">
+			<ul>
+				<li class="rightLi">І цяпер нясціпла гатовы сцвярджаць: нашы кулькі – ідэальныя!</li>
+				<li class="rightLi">Яны зроблены з паўпразрыстай крыху эластычнай тканіны,</li>
+				<li class="rightLi">усе краі апрацаваны з пяшчотай і ўвагай,</li>
+				<li class="rightLi">шнурочкі зацягваюцца лёгка і надзейна,</li>
+				<li class="rightLi">а краш-тэсты прайшлі на «ўра»!</li>
+			</ul>
+		</div>
+		<div class="center"></div>
+	</section>
+		
+	<section class="second">
+		<a name="instrukcia"></a>
+		<div class="parallax-window" data-parallax="scroll" data-image-src="img/second.jpg">
+			<h2>Iнструкцыя па выкарыстанні</h2>
+			<div class="containerSecond">
+				<ul class="left-content">
+					<li>2 Складваеце ў іх гуркі-памідоркі-арэхі-цукеркі</li>
+					<li>4 Яна робіць вялікія вочы («як так?! не пакет! а празрысты!») і ўзважвае вашы пакупкі</li>
+					<li>6 (Апцыянальны пункт): зручна (і прыгожа!) захоўваеце сухафрукты і арэхі прама ў кульках</li>
+				</ul>
+				<ul class="right-content">
+					<li>1 Бераце з сабой некалькі кулькоў, калі збіраецеся ў краму</li>
+					<li>3 Прыходзіце да касы і з гонарам працягваеце касірцы свае кулёчкі адзін за адным</li>
+					<li>5 Забіраеце кулькі дадому і радуецеся, што не давялося браць тонкія пластыкавыя пакеты, кожны з якіх раскладаўся б на працягу сотні год</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="third">
+		<a name="zamovic"></a>
+		<div class="parallax-window" data-parallax="scroll" data-image-src="img/fon.jpg">
+			<h2>Замовіць</h2>
+			<form name="myForm" onsubmit="return validate(this);">
+				<label>Імя</label>
+					<input type="text" name="ima" size=25 placeholder="Увядзіце імя">	
+				<label>Прозвішча</label>
+					<input type="text" name="family" size=25 placeholder="Увядзіце прозвішча">
+				<label>Тэлефон</label>
+					<input type="text" name="tel" size=25 placeholder="+375(ХХ)ХХХ-ХХ-ХХ">	
+				<label>E-mail</label>
+					<input type="text" name="mail" size=25 placeholder="mail@me.by">
+				<label>Памеры і колькасць</label>
+					<p>16х20 см</p>
+					<input type="number" size="3" name="num16" min="0" max="100" value="0" id="num16">
+					<p>22х26 см</p>
+					<input type="number" size="3" name="num22" min="0" max="100" value="0" id="num22">
+				<label>Разам:</label><div id="result"></div>
+			
+				<button class="btn" type="button" onclick="calculate()">Палічыць</button>
+				<button class="btn" name="order" type="submit" value="Замовіць">Замовіць</button>	
+			</form>
+		</div>
+	</section>
+
+	<footer class="topFooter">
+		<a name="kantakty"></a>
+			<div id="img1"></div>
+			<div id="img2"></div>
+			<div class="footerLogo"></div>
+	</footer>
+
+	<footer class="bottomFooter"> 
+		<div class="socialFooter">
+			<a href="https://vk.com/torbashow" target="_blank"><i class="icon-vkontakte"></i></a>
+			<a href="https://www.facebook.com/torbashow/" target="_blank"><i class="icon-facebook"></i></a>
+			<a href="https://www.youtube.com/channel/UCAs-0EcIlmJs5XvZGNmRUwQ/videosshow/" target="_blank"><i class="icon-youtube-play"></i></a>
+			<a href="https://www.instagram.com/torbashow/" target="_blank"><i class="icon-instagram"></i></a>
+		</div>
+		<button class="btn" onclick="move()" name="pressMe">Націсні мяне</button>
+		<p>Лістуйце:</p>
+		<p>torbashow@gmail.com</p>
+		<p>Тэлефануйце:</p>
+		<p>+375 44 785-40-86 (Саша)</p>
+		<p>+375 29 386-86-65 (Каця)</p>
+	</footer>
+</body>
+</html>
